@@ -1,0 +1,351 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  background: #FEFAE0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock{
+  width: 35rem;
+  height: 12rem;
+  background: rgba(96, 108, 56, 0.5);
+  box-shadow: rgba(40, 54, 24, 0.5) 0px 3px 5px 2px;
+  padding: 2rem;
+}
+
+.clock_digital{
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 161, 94, 0.8);
+  box-shadow: rgba(188, 108, 37, 0.5) 0px 30px 60px -12px inset, rgba(188, 108, 37, 0.7) 0px 18px 36px -18px inset;
+  display: flex;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock_days{
+  font-family: sans-serif;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock_days_day{
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color: rgba(96, 108, 56, 0.3);
+  margin-right: 1rem;
+}
+
+.clock_days_day--active{
+  color: rgba(96, 108, 56, 1);
+}
+
+.clock_hour{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 5;
+}
+
+.clock_number{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 10;
+}
+
+.clock_number_hou{
+  width: 30%;
+  height:90%;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.clock_number_min{
+  position: relative;
+  width: 30%;
+  height:90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.clock_number_seg{
+  position: relative;
+  width: 30%;
+  height:90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.clock_numbers{
+  width: 3rem;
+  height: 6rem;
+  position: relative;
+}
+
+.clock_points{
+  position: absolute;
+  color: rgba(96, 108, 56, 1);
+  font-size: 3rem;
+  right: -0.5rem;
+  top: 18%;
+}
+
+.clock_numbers_hor{
+  position: absolute;
+  width: 2.8em;
+  height: 0.3rem;
+  left: 0;
+  background: rgba(96, 108, 56, 0.2);
+}
+
+.clock_numbers--active{
+  background: rgba(96, 108, 56, 1);
+}
+
+.clock_numbers_hor:nth-child(1){
+  top: 0;
+}
+
+.clock_numbers_hor:nth-child(1)::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-right: 0.3rem solid transparent;
+}
+
+.clock_numbers_hor:nth-child(1)::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-left: 0.3rem solid transparent;
+}
+
+.clock_numbers_hor:nth-child(2){
+  top: 2.8rem;
+  width: 2.2em;
+  left: 0.3rem;
+}
+
+.clock_numbers_hor:nth-child(2)::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.3rem;
+  width: 0; 
+  height: 0; 
+  border-top: 0.15rem solid transparent;
+  border-right: 0.3rem solid rgba(96, 108, 56, 0.3);
+  border-bottom: 0.15rem solid transparent;
+}
+
+.clock_numbers_hor:nth-child(2)::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -0.3rem;
+  width: 0; 
+  height: 0; 
+  border-top: 0.15rem solid transparent;
+  border-left: 0.3rem solid rgba(96, 108, 56, 0.3);
+  border-bottom: 0.15rem solid transparent;
+}
+
+.clock_numbers--active.clock_numbers_hor:nth-child(2)::after{
+  border-left: 0.3rem solid rgba(96, 108, 56, 1);
+}
+
+.clock_numbers--active.clock_numbers_hor:nth-child(2)::before{
+  border-right: 0.3rem solid rgba(96, 108, 56, 1);
+}
+
+.clock_numbers_hor:nth-child(3){
+  top: 5.6rem;
+  border-radius: 1rem;
+}
+
+.clock_numbers_hor:nth-child(3)::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-top: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-right: 0.3rem solid transparent;
+}
+
+.clock_numbers_hor:nth-child(3)::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-top: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-left: 0.3rem solid transparent;
+}
+
+.clock_numbers_ver{
+  position: absolute;
+  width: 0.3rem;
+  height: 2.5rem;
+  background: rgba(96, 108, 56, 0.2);
+}
+
+.clock_numbers--active{
+  background: rgba(96, 108, 56, 1);
+}
+
+.clock_numbers_ver:nth-child(4){
+  top: 0.25rem;
+  left: 0;
+}
+
+.clock_numbers_ver:nth-child(4):before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid transparent;
+  border-right: 0.3rem solid rgba(221, 161, 94, 0.8);
+}
+
+.clock_numbers_ver:nth-child(4):after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-left: 0.3rem solid transparent;
+}
+
+.clock_numbers_ver:nth-child(5){
+  top: 0.25rem;
+  left: 2.6rem;
+}
+
+.clock_numbers_ver:nth-child(5):before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.3rem solid rgba(221, 161, 94, 0.8);
+}
+
+.clock_numbers_ver:nth-child(5):after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-right: 0.3rem solid transparent;
+}
+
+.clock_numbers_ver:nth-child(6){
+  top: 3.1rem;
+  left: 0;
+}
+
+.clock_numbers_ver:nth-child(6):before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid transparent;
+  border-right: 0.3rem solid rgba(221, 161, 94, 0.8);
+}
+
+.clock_numbers_ver:nth-child(6):after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-left: 0.3rem solid transparent;
+}
+
+.clock_numbers_ver:nth-child(7){
+  top: 3.1rem;
+  left: 2.6rem;
+}
+
+.clock_numbers_ver:nth-child(7):before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.3rem solid rgba(221, 161, 94, 0.8);
+}
+
+.clock_numbers_ver:nth-child(7):after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0; 
+  height: 0; 
+  border-bottom: 0.3rem solid rgba(221, 161, 94, 0.8);
+  border-right: 0.3rem solid transparent;
+}
+
+.clock_ampm{
+  width: 3rem;
+  font-weight: 800;
+  color: rgba(96, 108, 56, 0.3);
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock_ampm-view{
+  color: rgba(96, 108, 56, 1);
+}

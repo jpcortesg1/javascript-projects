@@ -21,7 +21,7 @@ const callChange = (numbers, divs) => {
 const onDay = (number, divs) => {
   for (let i = 0; i < divs.length; i++) {
     divs[i].classList.remove("clock_days_day--active");
-    if (i == number) {
+    if(i == number){
       divs[i].classList.add("clock_days_day--active");
     }
   }
@@ -39,7 +39,7 @@ const amOrPm = (hoursTime) => {
 
 const updateTime = () => {
   const time = new Date();
-  const day = addCero(time.getDay() - 1);
+  const day = addCero(time.getDay());
   const hoursTime = addCero(time.getHours());
   const minTime = addCero(time.getMinutes());
   const secTime = addCero(time.getSeconds());

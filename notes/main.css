@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+:root{
+  --dark: #1f1D36;
+  --semiDark: #3f3351;
+  --semiLight: #864879;
+  --light: #e9a6a6;
+  --transition: all 0.25s ease-in-out;
+}
+
+.container{
+  position: relative;
+  background: linear-gradient(var(--dark), var(--semiDark));
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+}
+
+.nav{
+  width: 15rem;
+  height: calc(100% - 2rem);
+  margin: 1rem;
+  background: var(--semiDark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--semiLight);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.button{
+  width: 100%;
+}
+
+button{
+  outline: none;
+  border: none;
+}
+
+.button_new{
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  background: var(--semiLight);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button_new:hover{
+  background: var(--light);
+}
+
+.button_new_icon{
+  font-size: 1.5rem;
+  color: var(--light);
+  transition: var(--transition);
+}
+
+.button_new:hover .button_new_icon{
+  color: var(--semiLight);
+}
+
+.nav_files{
+  width: 100%;
+  height: calc(100% - 3rem);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav_files_buttons{
+  width: 100%;
+  position: relative;
+  height: 1.5rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.nav_files_buttons--active{
+  background: var(--dark);
+  text-decoration: underline;
+}
+
+.nav_files_button{
+  text-align: start;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  color: var(--light);
+  background: transparent;
+}
+
+.nav_files_button_icon{
+  height: 1.5rem;
+  color: var(--light);
+  z-index: 300;
+}
+
+.nav_files_button_icon:hover{
+  color: var(--semiLight);
+}
+
+.content{
+  position: relative;
+  width: calc(100% - 19rem);
+  height: calc(100% - 5rem);
+  margin: 1rem;
+  display: none;
+}
+
+.content--visible{
+  display: block;
+}
+
+.title{
+  font-size: 1.3rem;
+  color: var(--light);
+  outline: none;
+  text-align: center;
+} 
+
+.content_title:focus, .content_description{
+  outline: none;
+  border: none;
+}
+
+.decription{
+  height: calc(100% - 5rem);
+  padding: 2rem;
+}
+
+.content_description{
+  text-align: justify;
+  color: var(--light);
+  opacity: 0.5;
+  height: 100%;
+}
+
+.content_button{
+  position: relative;
+}
+
+.content_button_save{
+  position: absolute;
+  right: 10rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  background-color: var(--semiLight);
+  cursor: pointer;
+  color: var(--light);
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_button_save:hover{
+  background-color: var(--light);
+  color: var(--semiLight);
+  letter-spacing: 0.2rem;
+}
+
+.content_button_save_icon{
+  font-size: 1.5rem;
+}

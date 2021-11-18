@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="./main.css">
+  <title>Notes</title>
+</head>
+<body>
+  <main class="container">
+    <nav class="nav">
+      <div class="button">
+        <button class="button_new" id="button_new">
+          <ion-icon name="add" class="button_new_icon"></ion-icon>
+        </button>
+      </div>
+
+      <div class="nav_files" id="nav_files" id="0">
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="title">
+        <h2 id="content_title" class="content_title" contentEditable="true"></h2>
+      </div>
+      <div class="decription">
+        <div id="content_description" class="content_description" contentEditable="true"></div>
+      </div>
+
+      <div class="content_button">
+        <button class="content_button_save" id="button_save">
+          <ion-icon class="content_button_save_icon" name="checkmark"></ion-icon>
+          Save
+        </button>
+      </div>
+    </div>
+  </main>
+  <script src="./Note.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

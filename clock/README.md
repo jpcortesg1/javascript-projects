@@ -6,4 +6,6 @@
   Clock
 </h2>
 
-This project is a clock that updates and modifies its time in real time, uses the object "date" and changes all its diesenos according to the case, the hours, the minutes, the seconds, whether it is a.m or p.m, the day of the week.
+This project is created to demonstrate the ability that can be obtained with the API date, also for this one a small array management is done, and also the management of the dom, the dom is managed in an array way, and thus operations with arrays are achieved in this project.
+It is primarily a clock that is updated to show the change in seconds, minutes, hours, time of day, and day of the week. The handling and change is simple with functions, there are no programming paradigms.
+The watch seeks to have a design similar to that of an old digital clock in which only the LEDs were lit when it was the right time. This is how this watch works.

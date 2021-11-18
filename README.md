@@ -22,7 +22,10 @@
   Javascript Projects
 </h2>
 
-In this repository projects will be created to demonstrate the level that I have in javascript, different projects will be made in which the management of the technologies, also the ability of design and resources will be demonstrated. In each folder will be the description of the projects and what you need to know about each of them.
+The purpose with which this repository is started is to demonstrate and leave clear evidence of the knowledge and skill I have in the javascript language, also in other areas, such as design and layout, i am looking for the level i have in the area of web development.
+This way I will create different projects which will be able to observe the skills that I have collected in the passage of time and after carrying out some smaller projects.
+In order to manage a better order, in each project open images that show how they are, and a brief description of the project as well as the topics that are important to mention.
+Every project is created by me and I don't seek to make a copy of these in any way.
 
 <h2 align="center">
   🤝 Connect with me.

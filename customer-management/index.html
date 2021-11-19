@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>customer Management</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar_button">
+        <button class="button" id="new-button">
+          New Client
+          <ion-icon name="add" class="button_icon"></ion-icon>
+        </button>
+      </div>
+
+      <div class="title">
+        <h2 class="title_content">customer Management</h2>
+        <ion-icon name="person" class="title_icon"></ion-icon>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+      <div id="potential_client" class="column">
+        <h2 class="column_title">Potencial Client</h2>
+      </div>
+      <div id="next_to_pay" class="column">
+        <h2 class="column_title">Next To Pay</h2>
+      </div>
+      <div id="paid_customer" class="column">
+        <h2 class="column_title">Paid Customer</h2>
+      </div>
+    </main>
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+      <div class="modal_content">
+        <div class="modal_close">
+          <ion-icon
+            id="close-modal"
+            name="close"
+            class="modal_close_icon"
+          ></ion-icon>
+        </div>
+
+        <h2 class="modal_title">Create New Client</h2>
+
+        <form class="modal_form">
+          <div class="modal_form_input">
+            <input
+              class="modal_form_input_space"
+              placeholder="Write Your Id"
+              type="number"
+              id="id-client"
+              name="id"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="modal_form_input">
+            <input
+              class="modal_form_input_space"
+              placeholder="Write Your name"
+              type="text"
+              id="name-client"
+              name="name"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="modal_form_input">
+            <input
+              class="modal_form_input_space"
+              placeholder="Write Your Phone"
+              type="number"
+              id="phone-client"
+              name="phone"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="modal_form_input">
+            <input
+              class="modal_form_input_space"
+              placeholder="Write Your email"
+              type="email"
+              id="email-client"
+              name="email"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="modal_form_input">
+            <input
+              class="modal_form_input_space"
+              placeholder="Write Your products separed for comas"
+              type="text"
+              id="products-client"
+              name="products"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="modal_form_input">
+            <input
+              type="submit"
+              id="new-client-button"
+              class="modal_form_input_button"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

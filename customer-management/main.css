@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --pry: #171717;
+  --sec: #444444;
+  --ter: #da0037;
+  --fou: #ededed;
+  --tra: all 0.25s ease-in-out;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  background: var(--pry);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_button {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: var(--ter);
+  border: 1px solid var(--ter);
+  color: var(--fou);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--tra);
+}
+
+.button:hover {
+  letter-spacing: 0.1rem;
+  border-radius: 5rem;
+  background: var(--fou);
+  color: var(--ter);
+}
+
+.button_icon {
+  color: var(--ter);
+  background: var(--fou);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.button:hover .button_icon {
+  color: var(--fou);
+  background: var(--ter);
+  transition: var(--tra);
+}
+
+.title {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_content {
+  color: var(--fou);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+}
+
+.title_icon {
+  font-size: 3rem;
+  margin-left: 1rem;
+  color: var(--ter);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background: var(--sec);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column {
+  border: 2px solid var(--pry);
+  border-top: none;
+  border-bottom: none;
+  width: 20rem;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: auto;
+}
+
+.column_title {
+  color: var(--fou);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 3rem;
+}
+
+.client {
+  width: 80%;
+  background: var(--fou);
+  padding: 1rem;
+  border: 1px solid var(--ter);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  user-select: all;
+}
+
+.client:active{
+  opacity: 0.6;
+}
+
+.client_name {
+  color: var(--pry);
+  text-align: center;
+  font-weight: 300;
+  border-bottom: 1px solid var(--pry);
+  margin-bottom: 1rem;
+}
+
+.client_data {
+  text-align: justify;
+  color: var(--pry);
+}
+
+.client_data_span {
+  color: var(--ter);
+  font-weight: 800;
+  border-bottom: 1px solid var(--ter);
+}
+
+.client_button {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.client_button_icon {
+  font-size: 1.2rem;
+  color: var(--ter);
+  cursor: pointer;
+  border-bottom: 1px solid var(--ter);
+}
+
+.client_button_icon:last-child {
+  color: var(--sec);
+  border-color: var(--sec);
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: flex;
+  opacity: 0;
+  transition: var(--tra);
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal_content {
+  width: 50rem;
+  height: 30rem;
+  background: var(--pry);
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_close_icon {
+  font-size: 1.6rem;
+  color: var(--ter);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal_title {
+  font-weight: 400;
+  color: var(--fou);
+  font-size: 2rem;
+  border-bottom: 1px solid var(--fou);
+}
+
+.modal_form {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal_form_input {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal_form_input_label {
+  color: var(--fou);
+  font-size: 1.3rem;
+}
+
+.modal_form_input_space {
+  width: 72%;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid var(--ter);
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1rem;
+  color: var(--fou);
+}
+
+.modal_form_input_space::placeholder{
+  color: var(--fou)
+}
+
+.modal_form_input_button{
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  border: 1px solid var(--ter);
+  background: var(--ter);
+  color: var(--fou);
+  text-transform: uppercase;
+  transition: var(--tra);
+}
+
+.modal_form_input_button:hover{
+  background: var(--fou);
+  color: var(--ter);
+  font-weight: 300;
+  border-radius: 1rem;
+  cursor: pointer;
+}

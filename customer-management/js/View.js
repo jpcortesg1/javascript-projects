@@ -17,9 +17,15 @@ export default class View {
     this.modal = new Modal("modal");
 
     // Column of clients
-    this.potentialClient = new Column("potential_client");
-    this.nextToPay = new Column("next_to_pay");
-    this.paidCustomer = new Column("paid_customer");
+    this.potentialClient = new Column("potential_client", (id, currentColumn) =>
+      this.changeOfZona(id, currentColumn)
+    );
+    this.nextToPay = new Column("next_to_pay", (id, currentColumn) =>
+      this.changeOfZona(id, currentColumn)
+    );
+    this.paidCustomer = new Column("paid_customer", (id, currentColumn) =>
+      this.changeOfZona(id, currentColumn)
+    );
     this.columns = [this.potentialClient, this.nextToPay, this.paidCustomer];
 
     // This clients
@@ -95,7 +101,21 @@ export default class View {
 
     this.clients[values["id"]].setHtml({ ...values });
 
-    this.butNewCli.onClickPreDef(() => this.createNewClient());
     this.closeModal();
+    this.butNewCli.onClickPreDef(() => this.createNewClient());
+  }
+
+  changeOfZona(id, currentColumn) {
+    const values = this.model.getClient(id);
+    const lastColumnNum = values["column"];
+    const lastColumn = this.columns[lastColumnNum - 1];
+    const html = document.getElementById(`cliente ${id}`);
+    for (let i = 0; i < this.columns.length; i++) {
+      if (this.columns[i].getColumn() === currentColumn) {
+        lastColumn.deleteChild(html);
+        this.columns[i].addChild(html);
+        this.model.setColumn(id, i + 1);
+      }
+    }
   }
 }

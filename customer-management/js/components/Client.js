@@ -79,7 +79,7 @@ export default class Client {
     `;
 
     div.addEventListener("dragstart", (e) => {
-      e.dataTransfer.setData("client", values["id"]);
+      e.dataTransfer.setData("client", this.client);
     });
 
     this.html = div;

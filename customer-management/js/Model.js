@@ -4,12 +4,18 @@ export default class Model {
     this.clients = {};
   }
 
+  setColumn(id, newColumn){
+    this.clients[id]["column"] = newColumn;
+  }
+
   setValues(lastId, values) {
     const { id } = values;
+    const column = this.clients[lastId]["column"];
     this.clients[lastId] = null;
     delete this.clients[lastId];
     if (id in this.clients && id !== lastId) return false; // Client already exists
     this.clients[id] = values;
+    this.clients[id]["column"] = column;
     return true;
   }
 

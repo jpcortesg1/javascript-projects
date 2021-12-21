@@ -31,7 +31,9 @@ export default class Client {
   }
 
   getZone() {
-    const items = document.querySelectorAll(".client_button");
+    const items = document.querySelectorAll(
+      "#potential_client .client .client_button"
+    );
     const item = items[items.length - 1];
     const elements = item.children;
     return elements;
